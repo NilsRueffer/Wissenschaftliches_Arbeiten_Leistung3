@@ -1,0 +1,9 @@
+# Wissenschaftliches_Arbeiten_Leistung3
+# Lastenheft
+# Beschreibung
+# In dieser Datei sollen die zu erledigenden Aufgabe beschrieben und verteilt werden
+# Version    Autor          Bemerkung
+# 1.0        Uwe Dreßler    Init
+
+
+
