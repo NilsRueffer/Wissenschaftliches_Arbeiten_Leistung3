@@ -1,5 +1,6 @@
 # Skript 1
 
+
 # Setting work directory to file location and sourcing helper-functions
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 #Importiere zunaechst Helferfunktion(en) aus Script2. R
@@ -39,12 +40,13 @@ statistics_for_metric_variables <- function() {
 
 #2
 statistics_for_categorial_variables <- function() {
+  # Version    Autor          Bemerkung
   # 1.0        Mattias Keppke Init
-  # 2.0        Uwe Dressler    Aufnahme Aufruf Dateneinlesen
+  # 2.0        Uwe Dreßler    Aufnahme Aufruf Dateneinlesen
   
+  # Description
   # TODO calculate and return the following : 
   # bincounts, max-count, min-count, ...
-  
   katstat = list("Range Interesse an Mathe" = range(data$Interesse.an.Mathe),
                  "Mean Interesse an Mathe " = mean(data$Interesse.an.Mathe),
                  "Range Interesse an Programmieren" = range(data$Interesse.an.Programmieren),
@@ -118,7 +120,7 @@ quantile_based_categorisation <- function(variable){
 
 Visual_kategorial <- function(variable){
   # Version    Autor          Bemerkung
-  # 1.0        Uwe Dressler    Initial
+  # 1.0        Uwe Dreßler    Initial
   
   # Description
   # Visualisierung Von Alter,
