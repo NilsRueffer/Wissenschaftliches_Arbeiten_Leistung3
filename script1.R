@@ -1,4 +1,9 @@
 # Skript 1
+
+# Setting work directory to file location and sourcing helper-functions
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+source("script2.R")
+
 #1
 statistics_for_metric_variables <- function(variables) {
   # Version    Autor          Bemerkung
@@ -74,5 +79,28 @@ biserial.cor.new <- function (x, y, use = c("all.obs", "complete.obs"), level = 
 }
 
 #5
+
+# quantile_based_categorisation - kategorisiert eine mindestens ordinal skalierte Variable 
+#                                 quantilbasiert.
+#
+# Input: variable - Die zu kategorisierende Variable als numerisches Array oder ordered.
+#
+# Output: Ein data frame mit der Variable und der Kategorisierung.
+
+quantile_based_categorisation <- function(variable){
+  stopifnot(length(variable) > 3L, is.ordered(variable) || is.numeric(variable))
+  
+  positions <- (c(0.33, 0.66) * length(variable))
+  quantiles <- c(rep("niedrig", positions[1]), rep("mittel", (positions[2] - positions[1])), 
+                 rep("hoch",(length(variable) - positions[2])))
+  variable <- sort(variable)
+  quantiles <- ordered(quantiles, levels = c("niedrig", "mittel", "hoch"))
+  
+  categorization <- quantiles
+  
+  res <- data.frame(variable, categorization)
+  return(res)
+}
+
 
 #6
