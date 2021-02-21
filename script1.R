@@ -33,7 +33,7 @@ statistics_for_categorial_variables <- function(variables) {
                  "Mean Interesse an Mathe " = mean(data$Interesse.an.Mathe),
                  "Range Interesse an Programmieren" = range(data$Interesse.an.Programmieren),
                  "Mean Interesse an Programmieren" = mean(data$Interesse.an.Programmieren),
-                 "%Mathe LK" = mean(data$Mahte.LK))
+                 "%Mathe LK" = mean(data$Mathe.LK))
   return(katstat)
 }
 
