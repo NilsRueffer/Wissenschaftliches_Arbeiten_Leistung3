@@ -104,3 +104,37 @@ quantile_based_categorisation <- function(variable){
 
 
 #6
+
+Visual_kategorial <- function(variable){
+  # Version    Autor          Bemerkung
+  # 1.0        Uwe Dreßler    Initial
+  
+  # Description
+  # Visualisierung Von Alter,
+  # 
+  data_in_df <- read_data_in_df()
+  
+  stopifnot(variable == "Alter"  || variable == "Studienfach" || variable == "Mathe" || variable == "Programmieren" || variable == "LK")
+  if (variable == "Alter") {
+    Alter <- factor(data_in_df$Alter)
+    plot(Alter)
+  }
+  if (variable == "Studienfach") {
+    Studienfach <- factor(data_in_df$Studienfach)
+    plot(Studienfach)
+  }
+  if (variable == "Mathe") {
+    Mathe <- factor(data_in_df$Interesse.an.Mathe)
+    plot(Mathe)
+  }
+  if (variable == "Programmieren") {
+    Programmieren <- factor(data_in_df$Interesse.an.Programmieren)
+    plot(Programmieren)
+  }
+  if (variable == "Lk") {
+    Lk <- factor(data_in_df$Mathe.LK)
+    plot(Lk)
+  }
+  
+
+}
