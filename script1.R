@@ -131,7 +131,7 @@ Visual_kategorial <- function(variable){
     Programmieren <- factor(data_in_df$Interesse.an.Programmieren)
     plot(Programmieren)
   }
-  if (variable == "Lk") {
+  if (variable == "LK") {
     Lk <- factor(data_in_df$Mathe.LK)
     plot(Lk)
   }
