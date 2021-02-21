@@ -18,34 +18,40 @@ statistics_between_two_categorial_variables <- function(variables1, variables2) 
 }
 
 #4
-statistics_between_metric_und_dichotomous_variables <- function(metricVariables, dichotomousVariables) {
-  # TODO calculate and return the following : 
 ## Punktbiseriale Korrelation
-sd.pop <- function(x){sd(x)*sqrt((length(x)-1)/length(x))}
+sd.pop <- function(metricVariables){sd(metricVariables)*sqrt((length(metricVariables)-1)
+                                                             /length(metricVariables))}
+
+statistics_between_metric_und_dichotomous_variables <- function(metricVariables
+                                                                , dichotomousVariables, use = c("all.obs", "complete.obs"), level = 1) {
   
-biserial.cor.new <- function (x, y, use = c("all.obs", "complete.obs"), level = 1) 
-  {
-    if (!is.numeric(x)) 
-      stop("'x' muss eine numerische Variable sein.\n")
-    y <- as.factor(y)
-    if (length(levs <- levels(y)) > 2) 
-      stop("'y' muss eine dichotome Variable sein.\n")
-    if (length(x) != length(y)) 
-      stop("'x' und 'y' haben nicht die gleiche Länge")
-    use <- match.arg(use)
-    if (use == "complete.obs") {
-      cc.ind <- complete.cases(x, y)
-      x <- x[cc.ind]
-      y <- y[cc.ind]
-    }
-    ind <- y == levs[level]
-    diff.mu <- mean(x[ind]) - mean(x[!ind])
-    prob <- mean(ind)
-    diff.mu * sqrt(prob * (1 - prob))/sd.pop(x)
-    
-  }  
- 
-}
+  if (!is.numeric(metricVariables)) 
+    stop("Es muss eine numerische Variable sein.\n")
+  dichotomousVariables <- as.factor(dichotomousVariables)
+  if (length(levs <- levels(dichotomousVariables)) > 2) 
+    stop("Es muss eine dichotome Variable sein.\n")
+  if (length(metricVariables) != length(dichotomousVariables)) 
+    stop("'metricVariables' und 'dichotomousVariables' haben nicht die gleiche Länge")
+  use <- match.arg(use)
+  if (use == "complete.obs") {
+    cc.ind <- complete.cases(metricVariables, dichotomousVariables)
+    metricVariables <- metricVariables[cc.ind]
+    dichotomousVariables <- dichotomousVariables[cc.ind]
+  }
+  ind <- dichotomousVariables == levs[level]
+  diff.mu <- mean(metricVariables[ind]) - mean(metricVariables[!ind])
+  prob <- mean(ind)
+  diff.mu * sqrt(prob * (1 - prob))/sd.pop(metricVariables)
+  
+}  
+
+statistics_between_metric_und_dichotomous_variables(data$Interesse.an.Mathe,
+                                                    data$Mathe.LK, level = 2)
+                                                    
+## [1] 0.05309925
+# Es gibt eine positive Korrelation zwischen die Variablen Interesse.an.Mathe
+# und Mathe.LK
+
 
 #5
 
