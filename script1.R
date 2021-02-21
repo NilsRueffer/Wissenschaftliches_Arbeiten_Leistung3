@@ -1,44 +1,8 @@
 # Skript 1
-<<<<<<< Updated upstream
 
 # Setting work directory to file location and sourcing helper-functions
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-source("script2.R")
-
-#1
-statistics_for_metric_variables <- function(variables) {
-  # Version    Autor          Bemerkung
-  # 1.0        Mattias Keppke Init
-  # 2.0        Uwe Dreßler    Aufnahme Aufruf Dateneinlesen
-  # 2.1        Uwe Dreßler    StdAbw und Varianz Alter getrennt ausgegeben
-  
-  # Description
-  # TODO calculate and return the following : 
-  # mean, median, variance/standard deviation, covariance-matrix, maximum, minimum, ...
-  data <- read_data_in_df()
-  metstat = list("Range Alter" = range(data$Alter),
-                 "Mean Alter" = mean(data$Alter),
-                 "StdAbw Alter" = sd(data$Alter),
-                 "Var Alter" = var(data$Alter),
-                 "Range Interesse an Mathe" = range(data$Interesse.an.Mathe),
-                 "Mean Interesse an Mathe " = mean(data$Interesse.an.Mathe),
-                 "Range Interesse an Programmieren" = range(data$Interesse.an.Programmieren),
-                 "Mean Interesse an Programmieren" = mean(data$Interesse.an.Programmieren))
-  return(metstat)
-}
-
-#2
-statistics_for_categorial_variables <- function(variables) {
-  # Version    Autor          Bemerkung
-  # 1.0        Mattias Keppke Init
-  # 2.0        Uwe Dreßler    Aufnahme Aufruf Dateneinlesen
-  
-  # Description
-  # TODO calculate and return the following : 
-  # bincounts, max-count, min-count, ...
-  data <- read_data_in_df()
-=======
-#Importiere zun�chst Helferfunktion(en) aus Script2. R
+#Importiere zunaechst Helferfunktion(en) aus Script2. R
 source("script2.R")
 #Speichere nun unseren Datensatz in Dataframe
 
@@ -46,12 +10,18 @@ data = read_data_in_df()
 
 #1
 statistics_for_metric_variables <- function() {
+  # Version    Autor          Bemerkung
+  # 1.0        Mattias Keppke Init
+  # 2.0        Uwe Dreßler    Aufnahme Aufruf Dateneinlesen
+  # 2.1        Uwe Dreßler    StdAbw und Varianz Alter getrennt ausgegeben
+  
   # TODO calculate and return the following : 
   # mean, median, variance/standard deviation, covariance-matrix, maximum, minimum, ...
     
   
     metstat = list("Range Alter" = range(data$Alter),
                    "Mean Alter" = mean(data$Alter),
+                   "StdAbw Alter" = sd(data$Alter),
                    "Var Alter" = var(data$Alter),
                    "Range Interesse an Mathe" = range(data$Interesse.an.Mathe),
                    "Mean Interesse an Mathe " = mean(data$Interesse.an.Mathe),
@@ -69,22 +39,18 @@ statistics_for_metric_variables <- function() {
 
 #2
 statistics_for_categorial_variables <- function() {
+  # 1.0        Mattias Keppke Init
+  # 2.0        Uwe Dressler    Aufnahme Aufruf Dateneinlesen
+  
   # TODO calculate and return the following : 
   # bincounts, max-count, min-count, ...
   
->>>>>>> Stashed changes
   katstat = list("Range Interesse an Mathe" = range(data$Interesse.an.Mathe),
                  "Mean Interesse an Mathe " = mean(data$Interesse.an.Mathe),
                  "Range Interesse an Programmieren" = range(data$Interesse.an.Programmieren),
                  "Mean Interesse an Programmieren" = mean(data$Interesse.an.Programmieren),
-<<<<<<< Updated upstream
                  "%Mathe LK" = mean(data$Mathe.LK))
   return(katstat)
-=======
-                 "%Mathe LK" = mean(data$Mahte.LK))
-  return(katstat)
-
->>>>>>> Stashed changes
 }
 
 #3
@@ -152,7 +118,7 @@ quantile_based_categorisation <- function(variable){
 
 Visual_kategorial <- function(variable){
   # Version    Autor          Bemerkung
-  # 1.0        Uwe Dreßler    Initial
+  # 1.0        Uwe Dressler    Initial
   
   # Description
   # Visualisierung Von Alter,
