@@ -63,9 +63,6 @@ statistics_between_two_categorial_variables <- function(variables1, variables2) 
 
 #4
 ## Punktbiseriale Korrelation
-sd.pop <- function(metricVariables){sd(metricVariables)*sqrt((length(metricVariables)-1)
-                                                             /length(metricVariables))}
-
 statistics_between_metric_und_dichotomous_variables <- function(metricVariables
                                                                 , dichotomousVariables, use = c("all.obs", "complete.obs"), level = 1) {
   
