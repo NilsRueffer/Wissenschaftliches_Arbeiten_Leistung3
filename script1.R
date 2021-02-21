@@ -9,6 +9,7 @@ statistics_for_metric_variables <- function(variables) {
   # Version    Autor          Bemerkung
   # 1.0        Mattias Keppke Init
   # 2.0        Uwe Dreßler    Aufnahme Aufruf Dateneinlesen
+  # 2.1        Uwe Dreßler    StdAbw und Varianz Alter getrennt ausgegeben
   
   # Description
   # TODO calculate and return the following : 
@@ -16,7 +17,8 @@ statistics_for_metric_variables <- function(variables) {
   data <- read_data_in_df()
   metstat = list("Range Alter" = range(data$Alter),
                  "Mean Alter" = mean(data$Alter),
-                 "Var Alter" = sd(data$Alter),
+                 "StdAbw Alter" = sd(data$Alter),
+                 "Var Alter" = var(data$Alter),
                  "Range Interesse an Mathe" = range(data$Interesse.an.Mathe),
                  "Mean Interesse an Mathe " = mean(data$Interesse.an.Mathe),
                  "Range Interesse an Programmieren" = range(data$Interesse.an.Programmieren),
