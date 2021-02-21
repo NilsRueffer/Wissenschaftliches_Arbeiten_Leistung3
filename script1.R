@@ -23,7 +23,9 @@ sd.pop <- function(metricVariables){sd(metricVariables)*sqrt((length(metricVaria
                                                              /length(metricVariables))}
 
 statistics_between_metric_und_dichotomous_variables <- function(metricVariables
-                                                                , dichotomousVariables, use = c("all.obs", "complete.obs"), level = 1) {
+  , dichotomousVariables, use = c("all.obs", "complete.obs"), level = 1) {
+  # Version      Autor           Bemerkung
+  # 1.0       Kaba Berete        Init
   
   if (!is.numeric(metricVariables)) 
     stop("Es muss eine numerische Variable sein.\n")
@@ -45,13 +47,12 @@ statistics_between_metric_und_dichotomous_variables <- function(metricVariables
   
 }  
 
-statistics_between_metric_und_dichotomous_variables(data$Interesse.an.Mathe,
-                                                    data$Mathe.LK, level = 2)
+statistics_between_metric_und_dichotomous_variables(Daten$Interesse.an.Mathe,
+                                                    Daten$Mathe.LK, level = 2)
                                                     
 ## [1] 0.05309925
-# Es gibt eine positive Korrelation zwischen die Variablen Interesse.an.Mathe
+# Es gibt eine schwache positive Korrelation zwischen die Variablen Interesse.an.Mathe
 # und Mathe.LK
-
 
 #5
 
