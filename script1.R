@@ -1,4 +1,5 @@
 # Skript 1
+<<<<<<< Updated upstream
 
 # Setting work directory to file location and sourcing helper-functions
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
@@ -36,12 +37,54 @@ statistics_for_categorial_variables <- function(variables) {
   # TODO calculate and return the following : 
   # bincounts, max-count, min-count, ...
   data <- read_data_in_df()
+=======
+#Importiere zunächst Helferfunktion(en) aus Script2. R
+source("script2.R")
+#Speichere nun unseren Datensatz in Dataframe
+
+data = read_data_in_df()
+
+#1
+statistics_for_metric_variables <- function() {
+  # TODO calculate and return the following : 
+  # mean, median, variance/standard deviation, covariance-matrix, maximum, minimum, ...
+    
+  
+    metstat = list("Range Alter" = range(data$Alter),
+                   "Mean Alter" = mean(data$Alter),
+                   "Var Alter" = var(data$Alter),
+                   "Range Interesse an Mathe" = range(data$Interesse.an.Mathe),
+                   "Mean Interesse an Mathe " = mean(data$Interesse.an.Mathe),
+                   "Range Interesse an Programmieren" = range(data$Interesse.an.Programmieren),
+                   "Mean Interesse an Programmieren" = mean(data$Interesse.an.Programmieren))
+    return(metstat)
+  
+  
+  #Offensichtlich haben wir Studierende zwischen 17 und 30 Jahren mit einem Durchschnitt von ca. 25 Jahren 
+  #Und einer Varianz von ca. 2
+  #Sowhol das Interesse an Mathematik, als auch das an Programmieren sind eine Skala von 1 bis 7
+  #Mit Mittelwerten von ca. 4.5
+  
+}
+
+#2
+statistics_for_categorial_variables <- function() {
+  # TODO calculate and return the following : 
+  # bincounts, max-count, min-count, ...
+  
+>>>>>>> Stashed changes
   katstat = list("Range Interesse an Mathe" = range(data$Interesse.an.Mathe),
                  "Mean Interesse an Mathe " = mean(data$Interesse.an.Mathe),
                  "Range Interesse an Programmieren" = range(data$Interesse.an.Programmieren),
                  "Mean Interesse an Programmieren" = mean(data$Interesse.an.Programmieren),
+<<<<<<< Updated upstream
                  "%Mathe LK" = mean(data$Mathe.LK))
   return(katstat)
+=======
+                 "%Mathe LK" = mean(data$Mahte.LK))
+  return(katstat)
+
+>>>>>>> Stashed changes
 }
 
 #3
