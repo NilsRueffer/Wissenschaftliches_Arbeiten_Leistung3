@@ -2,7 +2,7 @@
 
 
 # Setting work directory to file location and sourcing helper-functions
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+# setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 #Importiere zunaechst Helferfunktion(en) aus Script2. R
 source("script2.R")
 #Speichere nun unseren Datensatz in Dataframe
@@ -88,8 +88,8 @@ statistics_between_metric_und_dichotomous_variables <- function(metricVariables
   
 }  
 
-statistics_between_metric_und_dichotomous_variables(Daten$Interesse.an.Mathe,
-                                                    Daten$Mathe.LK, level = 2)
+statistics_between_metric_und_dichotomous_variables(data$Interesse.an.Mathe,
+                                                    data$Mathe.LK, level = 2)
                                                     
 ## [1] 0.05309925
 # Es gibt eine schwache positive Korrelation zwischen die Variablen Interesse.an.Mathe
