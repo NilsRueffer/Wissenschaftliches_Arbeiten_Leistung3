@@ -57,9 +57,29 @@ statistics_for_categorial_variables <- function() {
 
 #3
 statistics_between_two_categorial_variables <- function(variables1, variables2) {
-  # TODO calculate and return the following : 
-   
+  
+  #Version  Autor             Bemerkung
+  #1.0      Mattias & Thao    Bitte variablen in Anführungszeichen eingeben
+  
+  #Funktion nimmt 2 kategoriale Variablen entgegen und gibt Abhängigkeitstabelle zurück.
+  
+  if(variables1 != "Studienfach" && variables1 != "Interesse.an.Mathe" && variables1 != "Interesse.an.Programmieren" &&
+     variables1 != "Mathe.LK" ){
+    stop("Variables1 not confirm")
+  }
+  else if(variables2 != "Studienfach" &&  variables2 != "Interesse.an.Mathe" && variables2 != "Interesse.an.Programmieren" 
+        && variables2 != "Mathe.LK"){
+    stop("Variables 2 not confirm")
+  }
+  else if(variables1 == variables2){
+    stop("Nonsense!")
+  }
+  else{
+   return(table(data[[variables1]], data[[variables2]]))
+  }
 }
+
+statistics_between_two_categorial_variables("Studienfach", "Mathe.LK" )
 
 #4
 ## Punktbiseriale Korrelation
