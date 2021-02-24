@@ -3,7 +3,8 @@
 # Version    Autor          Bemerkung
 # 1.0        Uwe Dreßler    Init
 # 1.1        Uwe            Übername bisheriger Analyse
-# 1.2        Uwe            Aufruf Funktion 6 mit zusätzlichen plots
+# 1.2        Uwe            Aufruf Funktion 6 mit zusaetzlichen plots
+# 1.3        Uwe            Aufruf funktion 2 und 3 hinzugefuehgt
 source("script1.R")
 
 
