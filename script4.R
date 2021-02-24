@@ -24,6 +24,25 @@ metstat
 katstat <- statistics_for_categorial_variables () 
 katstat
 # Analyse
+# $`Range Interesse an Mathe`
+# [1] 1 7
+# 
+# $`Mean Interesse an Mathe `
+# [1] 4.49
+#
+# $`Range Interesse an Programmieren`
+# [1] 1 7
+#
+# $`Mean Interesse an Programmieren`
+# [1] 4.64
+#
+# $`%Mathe LK`
+# [1] 0.68
+# 
+# sowohl das interresse an programmierung als auch an mathematik sind ueberdurchschnittlich
+# und fast gleich
+# obwohl der für beide faelle das interesse die volle breite des interesses umfasst
+# der ueberwiegende teil der studenten war im mathe lk
 
 # Funktionsaufruf 3
 # statistics_between_two_categorial_variables <- function(variables1, variables2) {
@@ -34,7 +53,17 @@ katstat
 #Funktion nimmt 2 kategoriale Variablen entgegen und gibt Abh?ngigkeitstabelle zur?ck.
 
 
-statistics_between_two_categorial_variables("Studienfach", "Mathe.LK" )
+statistics_between_two_categorial_variables("Studienfach", "Interesse.an.Mathe")
+#               1  2  3  4  5  6  7
+# Data Science  2  9  7  2 11  2  5
+# Informatik    2  1  6  2  5  3  3
+# Mathe         0  1  2  1  2  2  9
+# Statistik     2  1  3  5  2  6  4
+# analyse 
+# Studenten die sehr großes interesse an mathematik haben studieren auch meistens mathematik
+# studenten die mathematik studieren haben zu meist sehr grosses interesse an mathematik
+# fuer die anderen studiengaenge gibt es keine auffaellige konzentration. 
+# bei allen studiengaengen verteilt sich das Interesse von sehr gering bis sehr hoch
 
 
 # Funktionsaufruf 4
