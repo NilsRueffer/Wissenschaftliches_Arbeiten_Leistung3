@@ -104,6 +104,7 @@ myvar_mathe2 = c(length(myvar$categorization[myvar$categorization == "niedrig"])
 names(myvar_mathe2) = c("niedrig","mittel","hoch")
 #niedrig  mittel    hoch 
 #33      33      34 
+barplot(myvar_mathe2)
 #33% der Studenten hat "niedrig" Interesse an Mathe
 #33% der Studenten hat "mittel" Interesse an Mathe
 #34% der Studenten hat "hoch" Interesse an Mathe
@@ -117,8 +118,14 @@ myvar_Programmieren2 = c(length(myvar$categorization[myvar$categorization == "ni
 names(myvar_Programmieren2) = c("niedrig","mittel","hoch")
 #niedrig  mittel    hoch 
 #33      33      34 
+#Visualisierung
+barplot(myvar_Programmieren2)
+
 #Das Ergibnis von der Intersse an Programmieren ist genau wie bei Mathe.
 #Das bedeutet, das die Interesse an Programmieren ist auch fast gleich in jeder kadinale Kategorie
+#Visualisierung
+barplot(myvar_Programmieren2)
+
 
 # Funktionsaufruf 6
 # #########
