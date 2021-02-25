@@ -104,9 +104,9 @@ myvar_mathe2 = c(length(myvar$categorization[myvar$categorization == "niedrig"])
 names(myvar_mathe2) = c("niedrig","mittel","hoch")
 #niedrig  mittel    hoch 
 #33      33      34 
-#33% der Studienten hat "niedrig" Interesse an Mathe
-#33% der Studienten hat "mittel" Interesse an Mathe
-#34% der Studienten hat "hoch" Interesse an Mathe
+#33% der Studenten hat "niedrig" Interesse an Mathe
+#33% der Studenten hat "mittel" Interesse an Mathe
+#34% der Studenten hat "hoch" Interesse an Mathe
 #Die Interesse an Mathe ist fast gleich in jeder kadinale Kategorie
 quantile_based_categorisation(data$Interesse.an.Programmieren) 
 myvar_Programmieren = quantile_based_categorisation(data$Interesse.an.Programmieren)
