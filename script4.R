@@ -98,9 +98,9 @@ quantile_based_categorisation(data$Interesse.an.Mathe)
 
 myvar_mathe = quantile_based_categorisation(data$Interesse.an.Mathe)
 
-myvar_mathe2 = c(length(myvar$categorization[myvar$categorization == "niedrig"]),
-           length(myvar$categorization[myvar$categorization == "mittel"]),
-           length(myvar$categorization[myvar$categorization == "hoch"]))
+myvar_mathe2 = c(length(myvar_mathe$categorization[myvar_mathe$categorization == "niedrig"]),
+           length(myvar_mathe$categorization[myvar_mathe$categorization == "mittel"]),
+           length(myvar_mathe$categorization[myvar_mathe$categorization == "hoch"]))
 names(myvar_mathe2) = c("niedrig","mittel","hoch")
 #niedrig  mittel    hoch 
 #33      33      34 
@@ -112,9 +112,9 @@ barplot(myvar_mathe2)
 quantile_based_categorisation(data$Interesse.an.Programmieren) 
 myvar_Programmieren = quantile_based_categorisation(data$Interesse.an.Programmieren)
 
-myvar_Programmieren2 = c(length(myvar$categorization[myvar$categorization == "niedrig"]),
-                 length(myvar$categorization[myvar$categorization == "mittel"]),
-                 length(myvar$categorization[myvar$categorization == "hoch"]))
+myvar_Programmieren2 = c(length(myvar_Programmieren$categorization[myvar_Programmieren$categorization == "niedrig"]),
+                 length(myvar_Programmieren$categorization[myvar_Programmieren$categorization == "mittel"]),
+                 length(myvar_Programmieren$categorization[myvar_Programmieren$categorization == "hoch"]))
 names(myvar_Programmieren2) = c("niedrig","mittel","hoch")
 #niedrig  mittel    hoch 
 #33      33      34 
