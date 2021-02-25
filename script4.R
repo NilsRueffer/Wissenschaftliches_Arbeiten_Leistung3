@@ -94,8 +94,31 @@ statistics_between_metric_und_dichotomous_variables(data$Interesse.an.Mathe,
 # Output: Ein data frame mit der Variable und der Kategorisierung.
 
 #  quantile_based_categorisation <- function(variable)
+quantile_based_categorisation(data$Interesse.an.Mathe) 
 
+myvar_mathe = quantile_based_categorisation(data$Interesse.an.Mathe)
 
+myvar_mathe2 = c(length(myvar$categorization[myvar$categorization == "niedrig"]),
+           length(myvar$categorization[myvar$categorization == "mittel"]),
+           length(myvar$categorization[myvar$categorization == "hoch"]))
+names(myvar_mathe2) = c("niedrig","mittel","hoch")
+#niedrig  mittel    hoch 
+#33      33      34 
+#33% der Studienten hat "niedrig" Interesse an Mathe
+#33% der Studienten hat "mittel" Interesse an Mathe
+#34% der Studienten hat "hoch" Interesse an Mathe
+#Die Interesse an Mathe ist fast gleich in jeder kadinale Kategorie
+quantile_based_categorisation(data$Interesse.an.Programmieren) 
+myvar_Programmieren = quantile_based_categorisation(data$Interesse.an.Programmieren)
+
+myvar_Programmieren2 = c(length(myvar$categorization[myvar$categorization == "niedrig"]),
+                 length(myvar$categorization[myvar$categorization == "mittel"]),
+                 length(myvar$categorization[myvar$categorization == "hoch"]))
+names(myvar_Programmieren2) = c("niedrig","mittel","hoch")
+#niedrig  mittel    hoch 
+#33      33      34 
+#Das Ergibnis von der Intersse an Programmieren ist genau wie bei Mathe.
+#Das bedeutet, das die Interesse an Programmieren ist auch fast gleich in jeder kadinale Kategorie
 
 # Funktionsaufruf 6
 # #########
