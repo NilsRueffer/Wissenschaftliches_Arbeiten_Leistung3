@@ -166,31 +166,7 @@ Visual_kategorial("LK")
 
 # ##########
 # weitere analysen
-# Kreuztabelle Fuer die variablen Interesse an Mathematik und 
-#Interesse an Programmieren
-Kreztab <- xtabs(~ data$Interesse.an.Mathe + data$Interesse.an.Programmieren)
-prop.table(Kreztab, 1)
-#                                       Interesse Programmieren
-#Interesse Mathe  1       2          3          4          5           6        7
-#       1 0.16666667 0.00000000 0.00000000 0.16666667 0.16666667 0.16666667 0.33333333
-#       2 0.00000000 0.08333333 0.08333333 0.00000000 0.33333333 0.08333333 0.41666667
-#       3 0.05555556 0.00000000 0.05555556 0.38888889 0.11111111 0.16666667 0.22222222
-#       4 0.00000000 0.30000000 0.00000000 0.30000000 0.10000000 0.10000000 0.20000000
-#       5 0.00000000 0.10000000 0.20000000 0.30000000 0.15000000 0.00000000 0.25000000
-#       6 0.07692308 0.23076923 0.23076923 0.07692308 0.07692308 0.00000000 0.30769231
-#       7 0.00000000 0.14285714 0.19047619 0.23809524 0.09523810 0.14285714 7 0.19047619
-# 33 % der Studierende, die ein sehr geringes Interesse an Mathe haben,
-#haben eine sehr hoehes Interesse an Programmieren.
-# Die Studierende, die ein sehr geringes Interesse an Programmieren haben,
-# haben fast gar kein Interesse an Mathematik.
-# 30 % der Studierende, deren Interesse an Mathematik gleich 6 ist, haben ein sehr
-# hoehes Interesse an Programmieren.
-# 26% der Studierende haben ein sehr hoehes Interesse an Programmieren.
 
-# Korrelationskoeffizient
-cor(data$Interesse.an.Mathe, data$Interesse.an.Programmieren)
-# [1] -0.1726735
-# Es gibt keinen signifikanten negativen Zusammenhang zwischen beide Variablen.
 
 
 # zusammenfassung aller analysen
