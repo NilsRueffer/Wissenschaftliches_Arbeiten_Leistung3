@@ -48,9 +48,6 @@ katstat
 # Funktionsaufruf 3
 # statistics_between_two_categorial_variables <- function(variables1, variables2) {
 
-#Version  Autor             Bemerkung
-#1.0      Mattias & Thao    Bitte variablen in Anf?hrungszeichen eingeben
-
 #Funktion nimmt 2 kategoriale Variablen entgegen und gibt Abh?ngigkeitstabelle zur?ck.
 
 
