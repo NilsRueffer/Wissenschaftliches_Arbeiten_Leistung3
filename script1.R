@@ -58,8 +58,6 @@ statistics_for_categorial_variables <- function() {
 #3
 statistics_between_two_categorial_variables <- function(variables1, variables2) {
   
-  #Version  Autor             Bemerkung
-  #1.0      Mattias & Thao    Bitte variablen in Anführungszeichen eingeben
   
   #Funktion nimmt 2 kategoriale Variablen entgegen und gibt Abhängigkeitstabelle zurück.
   
