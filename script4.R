@@ -14,6 +14,30 @@ source("script1.R")
 # Funktionsaufruf 1
 metstat <- statistics_for_metric_variables ()
 metstat
+# $`Range Alter`
+# [1] 17 30
+
+# $`Mean Alter`
+# [1] 25.17
+
+# $`StdAbw Alter`
+# [1] 1.964611
+
+# $`Var Alter`
+# [1] 3.859697
+
+# $`Range Interesse an Mathe`
+# [1] 1 7
+
+# $`Mean Interesse an Mathe `
+# [1] 4.49
+
+# $`Range Interesse an Programmieren`
+# [1] 1 7
+
+# $`Mean Interesse an Programmieren`
+# [1] 4.64
+
 # Analyse
 #Offensichtlich haben wir Studierende zwischen 17 und 30 Jahren mit einem Durchschnitt von ca. 25 Jahren 
 #Und einer Varianz von ca. 2
