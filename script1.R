@@ -59,7 +59,7 @@ statistics_for_categorial_variables <- function() {
 statistics_between_two_categorial_variables <- function(variables1, variables2) {
   
   
-  #Funktion nimmt 2 kategoriale Variablen entgegen und gibt Abhängigkeitstabelle zurück.
+  #Funktion nimmt 2 kategoriale Variablen entgegen und gibt Abh?ngigkeitstabelle zur?ck.
   
   if(variables1 != "Studienfach" && variables1 != "Interesse.an.Mathe" && variables1 != "Interesse.an.Programmieren" &&
      variables1 != "Mathe.LK" ){
@@ -145,7 +145,7 @@ Visual_kategorial <- function(variable){
   # 1.0        Uwe DreÃŸler    Initial
   
   # Description
-  # Visualisierung Von Alter,
+  # Visualisierung Von Alter,Studienfach, Mathe, Programmieren, LK
   # 
   data_in_df <- read_data_in_df()
   
