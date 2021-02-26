@@ -62,6 +62,14 @@ statistics_between_two_categorial_variables("Studienfach", "Interesse.an.Mathe")
 # studenten die mathematik studieren haben zu meist sehr grosses interesse an mathematik
 # fuer die anderen studiengaenge gibt es keine auffaellige konzentration. 
 # bei allen studiengaengen verteilt sich das Interesse von sehr gering bis sehr hoch
+statistics_between_two_categorial_variables("Studienfach", "Interesse.an.Programmieren")
+#                 1  2  3  4  5  6  7
+#   Data Science  0  3  2 11  6  2 14
+#   Informatik    0  2  5  5  3  0  7
+#   Mathe         1  2  4  3  1  4  2
+#   Statistik     2  5  2  4  4  3  3
+# Die ueberwiegende Zahl der Studierenden, die Interesse an Programmieren hat 
+# studiert Data Science
 
 
 # Funktionsaufruf 4
@@ -137,14 +145,15 @@ boxplot(data_in_df$Alter)
 # #########
 Visual_kategorial("Studienfach") 
 # Analyse
-# data science ist überproportional vertreten
+# data science ist überproportional vertreten 
 # Informatik und statistik annähernd gleich
 
 # zusätzliche darstellung
 data_in_df <- read_data_in_df()
 Studienfach <- factor(data_in_df$Studienfach,labels = c("Science", "Infor.", "Mathe","Statistik"))
 plot(Studienfach)
-
+# data science ist etwa doppelt so haeufig vertreten wie jeweils Informatik und Statistik
+# Informatik und Statistik etwas mehr als Mathematik
 
 # ######
 Visual_kategorial("Mathe")
